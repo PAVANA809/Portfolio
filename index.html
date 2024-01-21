@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pavana HA</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/qvx8rmi.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/1e5abb997e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="app">
+    <div id="header">
+      <div id="name">Pavana HA</div>
+      <div id="menu">
+        <ul class="menu-list">
+          <li
+            v-for="(item, index) in menulist"
+            :key="index"
+            :style="{ animationDelay: `${index * 0.3}s` }"
+            @click="scroll(item.ref)"
+          >
+            <span>{{ item.name }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <ul>
+          <li v-for="(item,key) in contactlist">
+            <i :class="item.class" style="color: #027e1b"></i>
+            <span>{{ item.text }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="main">
+      <div class="left">
+        <p class="fsd">< Full-Stack Developer /></p>
+        <p>< Talk is Cheap /></p>
+        <p>< show me your code /></p>
+      </div>
+      <div class="right">
+        <div class="circle">
+          <img src="images/coder1.png" />
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div ref="about" id="about"></div>
+    <hr />
+    <div id="works" ref="works">
+      <div class="works-left slidingWindow">
+        <i
+          id="left-arrow"
+          @click="prev"
+          class="fa-solid fa-chevron-left fa-lg"
+        ></i>
+        <div class="slides">
+          <div class="window sides">
+            <img
+              :src="projects[prevIndex].image"
+              :key="prevIndex"
+              alt="items[prevIndex].image"
+            />
+            <p>{{projects[prevIndex].image}}</p>
+          </div>
+          <div class="window">
+            <img
+            style="height: 200px; width: 200px;"
+              :src="projects[projIndex].image"
+              :key="projIndex"
+              alt="items[projIndex].image"
+            />
+            <p>{{projects[projIndex].image}}</p>
+          </div>
+          <div class="window sides">
+            <img
+              :src="projects[nextIndex].image"
+              :key="nextIndex"
+              alt="items[nextIndex].image"
+            />
+            <p>{{projects[nextIndex].image}}</p>
+          </div>
+        </div>
+
+        <i
+          id="right-arrow"
+          @click="next"
+          class="fa-solid fa-chevron-right fa-lg"
+        ></i>
+      </div>
+      <div class="works-right">
+        <p>works right content</p>
+      </div>
+    </div>
+
+    <hr />
+    <div ref="contact" id="contact"></div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

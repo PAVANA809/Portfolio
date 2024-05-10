@@ -25,6 +25,7 @@ body {
 #name {
   font-size: 28px;
   font-family: "Alegreya SC Bold";
+  cursor: pointer;
 }
 
 i {
@@ -207,6 +208,12 @@ li span:hover {
 
 #about {
   height: 100vh;
+  padding: 5% 16%
+}
+
+#about p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
 }
 
 /* contact */

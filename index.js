@@ -17,10 +17,6 @@ const app = createApp({
           ref: "works",
         },
         {
-          name: "< Notes />",
-          ref: null,
-        },
-        {
           name: "< Contact />",
           ref: "contact",
         },
@@ -40,12 +36,7 @@ const app = createApp({
         },
       ],
       projects: [
-        { image: "images/coder1.png" },
-        { image: "images/coder2.png" },
-        { image: "images/coder3.png" },
-        { image: "images/coder4.png" },
-        { image: "images/coder5.png" },
-        { image: "images/coder6.png" },
+        { image: "images/coder1.png" }
       ],
     };
     },

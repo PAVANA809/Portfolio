@@ -14,7 +14,7 @@
   </head>
   <body id="app">
     <div id="header">
-      <div id="name">Pavana HA</div>
+      <div @Click="scroll('main')" id="name">Pavana HA</div>
       <div id="menu">
         <ul class="menu-list">
           <li
@@ -36,11 +36,13 @@
         </ul>
       </div>
     </div>
-    <div id="main">
+    <div ref="main" id="main">
       <div class="left">
+        <p style="font-size: 44px;">< HI, /></p>
+        <p style="font-size: 64px;">< I'm Pavan, /></p>
         <p class="fsd">< Full-Stack Developer /></p>
-        <p>< Talk is Cheap /></p>
-        <p>< show me your code /></p>
+        <p>< Technocrat /></p>
+        <p>< 4920646f6e2774206b6e6f77207768617420656c7365 /></p>
       </div>
       <div class="right">
         <div class="circle">
@@ -49,7 +51,11 @@
       </div>
     </div>
     <hr />
-    <div ref="about" id="about"></div>
+    <div ref="about" id="about">
+      <p>Hello, I'm Pavana H A, a 2023 graduate with a BE in Information Science and Engineering from Ramaiah Institute of Technology. My journey in technology began with a strong foundation in programming languages like Java, Python, and C. Over time, I've honed my skills and expanded my expertise to encompass a wide range of technologies including React, React Native, Node.js, Spring Boot, Docker, and Kubernetes.
+      <p>Driven by a passion for continuous learning, I stay abreast of the latest industry trends and advancements. With a commitment to excellence and a thirst for knowledge, I strive to make a meaningful impact in the field of software development. Let's collaborate and create innovative solutions that push the boundaries of what's possible!</p>
+    </p>
+    </div>
     <hr />
     <div id="works" ref="works">
       <div class="works-left slidingWindow">
